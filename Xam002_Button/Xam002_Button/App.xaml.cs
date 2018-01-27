@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace Xam001_ContentPage
+namespace Xam002_Button
 {
 	public partial class App : Application
 	{
@@ -13,7 +13,7 @@ namespace Xam001_ContentPage
 		{
 			InitializeComponent();
 
-		    MainPage = new HomePage();
+			MainPage = new HomePage();
 		}
 
 		protected override void OnStart ()
