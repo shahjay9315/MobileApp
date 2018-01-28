@@ -22,5 +22,10 @@ namespace Xam004_Navigation
             string text = MainEntry.Text;
             MainLabel.Text = "Hello " + text;
         }
+
+        private async void NavigateButton_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page1());
+        }
 	}
 }

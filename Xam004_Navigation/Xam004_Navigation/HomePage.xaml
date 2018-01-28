@@ -26,6 +26,15 @@
                    HorizontalOptions="CenterAndExpand"
                    Margin="10"
                    />
+            <Button
+                BackgroundColor="Blue"
+                Text="Navigate to second page"
+                TextColor="White"
+                Clicked="NavigateButton_OnClicked"
+                
+                
+                
+                />
 
         </StackLayout>
     </ContentPage.Content>
