@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xam004_Navigation.HomePage"
+             BackgroundColor="White"
+             >
+    <ContentPage.Content>
+        <StackLayout
+            Padding="60"
+            BackgroundColor="White"
+            VerticalOptions="Center"
+            >
+            <Entry x:Name="MainEntry" 
+                   TextColor="Gray"
+                   BackgroundColor="White"
+                   />
+            <Button 
+                Clicked="Button_OnClicked"
+                Text="Say Hello!"
+                TextColor="White"
+                BackgroundColor="Green"
+                Margin="10"/>
+            <Label x:Name="MainLabel" 
+                   FontSize="60"
+                   TextColor="Gray"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="10"
+                   />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
