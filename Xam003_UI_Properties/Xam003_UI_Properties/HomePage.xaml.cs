@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Xam002_Button
+namespace Xam003_UI_Properties
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class HomePage : ContentPage
 	{
-		public HomePage ()
-		{
-			InitializeComponent ();
-		}
+	    public HomePage()
+	    {
+	        InitializeComponent();
+	    }
 
 	    private void Button_OnClicked(object sender, EventArgs e)
 	    {
@@ -23,5 +23,5 @@ namespace Xam002_Button
 
 	        MainLabel.Text = "Hello " + text;
 	    }
-	}
+    }
 }
