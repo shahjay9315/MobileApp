@@ -13,8 +13,16 @@ variables:
   buildConfiguration: 'Release'
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
 
-steps:
-- task: NuGetToolInstaller@1
+steps:- task: XamarinAndroid@1
+  inputs:
+    projectFile: '**/*.csproj'
+    outputDirectory: '- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(build.binariesdirectory)/$(BuildConfiguration)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container''
+    configuration: '$(BuildConfiguration)'
+    jdkOption: 'JDKVersion'- task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
   inputs:
@@ -22,6 +30,14 @@ steps:
 
 - task: XamarinAndroid@1
   inputs:
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: '$(build.binariesdirectory)/$(BuildConfiguration)/*.apk'
+    apksign: false
+    zipalign: false
     projectFile: '**/*droid*.csproj'
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: 'Use NuGet 4.4.1'
